@@ -1,0 +1,12 @@
+{
+  "name": "mascara-serverless",
+  "version": "0.0.1",
+  "description": "Mascara can generate a serverless API in to a Web system has no APIs.",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/mesh1nek0x0/mascara-serverless.git",
+  "author": "mesh1nek0x0 <mesh1nek0x0@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
