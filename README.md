@@ -1,4 +1,4 @@
-# ![](https://dummyimage.com/32&text=mascara) mascara-serverless 
+# ![](https://dummyimage.com/32&text=mascara) mascara-serverless
 <!-- add logo image if you like -->
 
 Mascara can generate a serverless API in to a Web system has no APIs.
