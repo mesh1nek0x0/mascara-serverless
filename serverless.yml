@@ -57,6 +57,11 @@ provider:
 functions:
   google-serach-endpoint:
     handler: src/google-search/handler.index
+    role: endopointRole
+    events:
+      - http:
+          path: mascare/google-search
+          method: post
 
   google-serach:
     handler: src/google-search/main.index
@@ -93,14 +98,22 @@ functions:
 #    environment:
 #      variable2: value2
 
-# you can add CloudFormation resource templates here
-#resources:
-#  Resources:
-#    NewResource:
-#      Type: AWS::S3::Bucket
-#      Properties:
-#        BucketName: my-new-bucket
-#  Outputs:
-#     NewOutput:
-#       Description: "Description for the output"
-#       Value: "Some output value"
+resources:
+  Resources:
+    endopointRole:
+      Type: AWS::IAM::Role
+      Properties:
+        Path: /
+        RoleName: endopointRole
+        ManagedPolicyArns:
+        # for invoke lambda
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaRole'
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+              - lambda.amazonaws.com
+            Action: sts:AssumeRole
