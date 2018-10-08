@@ -16,10 +16,10 @@ Mascara can generate a serverless API in to a Web system has no APIs.
 
 ## :white_check_mark: Features
 <!-- list up your product features. -->
-- WIP :sparkles: web scraping by  [serverless-chrome](https://github.com/adieuadieu/serverless-chrome)
+- :sparkles: web scraping by  [serverless-chrome](https://github.com/adieuadieu/serverless-chrome)
 - WIP :zap: generate serverless APIs with [Serverless](https://serverless.com/) on AWS
-- WIP :art: support .editorconfig
-- WIP :shirt: support lint with [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
+- :art: support .editorconfig
+- :shirt: support lint with [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
 - WIP :black_joker: support test&coverage with [Jest](https://facebook.github.io/jest/)
 - WIP :arrows_counterclockwise: support [CircleCI](https://circleci.com/)
 ---
@@ -29,7 +29,7 @@ Mascara can generate a serverless API in to a Web system has no APIs.
 <!-- show dependencies first -->
 * node v8.10.0+
 * yarn v1.7.0+
-* serverless v1.26.0+
+* serverless v1.32.0+
 
 ### Step
 1. Install
@@ -45,6 +45,11 @@ You can also fork this repository
 *invoke local*
 ```
 $ yarn invoke
+```
+
+*invoke google-search sample directly*
+```
+$ yarn invoke:google-search
 ```
 
 *run test*
