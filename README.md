@@ -53,6 +53,7 @@ $ yarn invoke:google-search
 ```
 
 *run test*
+WIP
 ```
 $ yarn test
 ```
@@ -62,7 +63,7 @@ $ yarn test
 $ yarn lint
 ```
 
-*deploy API（Lambda&API Gateway）*
+*deploy sample Google Search API*
 ```
 $ yarn deploy [--aws-profile <yourProfile>]
 ```
@@ -71,7 +72,13 @@ $ yarn deploy [--aws-profile <yourProfile>]
 
 ## :information_source: Anything else
 <!-- show how to test, how to contribute -->
-nothing
+Once you deploy Sample Google Search API, you can invoke it like bellow.
+
+```
+$ curl https://xxx.execute-api.your-region.amazonaws.com/dev/mascare/google-search -X POST -d '{"TOKEN": "update-this-token", "text": "hoge"}'
+```
+
+you can see the result in Cloud Watch Logs @
 
 ## :pencil: Author
 [mesh1nek0x0](https://github.com/mesh1nek0x0)
