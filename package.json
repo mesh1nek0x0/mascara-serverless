@@ -10,7 +10,9 @@
     "lint": "eslint src",
     "test": "jest --config=jest.config.json",
     "invoke": "sls invoke local -f google-search-endpoint",
-    "invoke:google": "sls invoke local -f google-search"
+    "invoke:google": "sls invoke local -f google-search",
+    "deploy": "sls deploy"
+
   },
   "devDependencies": {
     "aws-sdk": "^2.326.0",

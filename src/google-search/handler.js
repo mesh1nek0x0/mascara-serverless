@@ -4,8 +4,8 @@ const AWS = require('aws-sdk');
 
 module.exports.index = async (event, context, callback) => {
     console.log(context);
-    const token = JSON.parse(event.body).TOKEN;
-    if (token != process.env.TOKEN) {
+    const req = JSON.parse(event.body);
+    if (req.TOKEN != process.env.TOKEN) {
         return {
             statusCode: 400,
             body: JSON.stringify({
@@ -21,7 +21,7 @@ module.exports.index = async (event, context, callback) => {
         ClientContext: 'google-search-endpoint',
         InvocationType: 'Event',
         Payload: JSON.stringify({
-            args: {"test": "hoge"}
+            "searchWord": req.text
         }),
     };
 

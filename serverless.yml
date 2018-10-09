@@ -57,6 +57,8 @@ provider:
 functions:
   google-search-endpoint:
     handler: src/google-search/handler.index
+    environment:
+      TOKEN: update-this-token
     role: endopointRole
     events:
       - http:
