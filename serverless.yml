@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: google-serach # NOTE: update this with your service name
+service: mascara-google-search # NOTE: update this with your service name
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -55,7 +55,7 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  google-serach-endpoint:
+  google-search-endpoint:
     handler: src/google-search/handler.index
     role: endopointRole
     events:
@@ -63,7 +63,7 @@ functions:
           path: mascare/google-search
           method: post
 
-  google-serach:
+  google-search:
     handler: src/google-search/main.index
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

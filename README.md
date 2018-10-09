@@ -71,7 +71,11 @@ $ yarn deploy [--aws-profile <yourProfile>]
 
 ## :information_source: Anything else
 <!-- show how to test, how to contribute -->
-nothing
+Once you deploy Sample Google Search API, you can invoke it like bellow.
+
+```
+$ curl -X POST
+```
 
 ## :pencil: Author
 [mesh1nek0x0](https://github.com/mesh1nek0x0)

@@ -17,8 +17,8 @@ module.exports.index = async (event, context, callback) => {
 
     const lambda = new AWS.Lambda();
     const params = {
-        FunctionName: 'google-serach-dev-google-serach',
-        ClientContext: 'google-serach-endpoint',
+        FunctionName: 'mascara-google-search-dev-google-search',
+        ClientContext: 'google-search-endpoint',
         InvocationType: 'Event',
         Payload: JSON.stringify({
             args: {"test": "hoge"}
